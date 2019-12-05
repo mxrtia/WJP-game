@@ -17,10 +17,7 @@ public class Main {
 	int yCenter=(screenHeight-gameHeight)/2;
 
     GameWindow gra=new GameWindow(gameWidth, gameHeight, xCenter, yCenter);
-
-
-
-	gra.setVisible(true);
+    gra.setVisible(true); //WYŚWIETLENIE TŁA
 
     }
 }
