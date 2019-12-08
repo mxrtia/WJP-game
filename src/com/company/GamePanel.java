@@ -1,15 +1,19 @@
 package com.company;
 
-import  java.awt.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import javax.swing.*;
+import javax.sound.sampled.*;
 
 public class GamePanel extends JPanel {
     public int Width;
     public int Height;
     public int barHeight;
     public Font menuFont;
+
+
 
     public GameLevel gLevel;  //obiekt reprezentujący status gry
 
@@ -36,9 +40,22 @@ public class GamePanel extends JPanel {
                 if(me.getX()>1050 && me.getX()<1280 && me.getY()>(Height-barHeight)){
                     System.exit(1);
                 }
-            }
+                if(me.getX()>200 && me.getX()<265 && me.getY()>00 && me.getY()<1000){
+                    PianoTime.wlaczDzwiek1();
+                }
+                if(me.getX()>265 && me.getX()<308 && me.getY()>00 && me.getY()<1000){
+                    PianoTime.wlaczDzwiek2();
+                }
+                if(me.getX()>309 && me.getX()<350 && me.getY()>00 && me.getY()<1000){
+                    PianoTime.wlaczDzwiek3();
+                }
 
+            }
         });
+
+
+
+
     }//koniec GamePanel()
     @Override
     protected void paintComponent(Graphics gs) {
@@ -85,6 +102,7 @@ public class GamePanel extends JPanel {
             g.drawString("Poziom 3", 575, Height-70);
             g.drawString("Poziom 4", 825, Height-70);
             g.drawString("Wyjście", 1075, Height-70);
+
 
         }
     }

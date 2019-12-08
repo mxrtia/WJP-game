@@ -19,5 +19,6 @@ public class Main {
     GameWindow gra=new GameWindow(gameWidth, gameHeight, xCenter, yCenter);
     gra.setVisible(true); //WYŚWIETLENIE TŁA
 
+
     }
 }

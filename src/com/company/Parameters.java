@@ -1,5 +1,6 @@
 package com.company;
 
+import java.applet.AudioClip;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -13,6 +14,8 @@ public class Parameters {
     public static Image[] keys;
     /** TYMCZASOWA KLAWIATURA **/
     public static Image klawiatura;
+    /** DZWIEK **/
+    public static int dzwiek;
 
 
     public static void loadInitialImages() {

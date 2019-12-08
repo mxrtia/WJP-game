@@ -4,6 +4,7 @@
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parameters.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
