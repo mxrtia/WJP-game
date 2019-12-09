@@ -16,6 +16,10 @@ public class Parameters {
     public static Image klawiatura;
     /** DZWIEK **/
     public static int dzwiek;
+    /** MAŁA KLAWIATURA Z PODPISANYMI DŹWIĘKAMI **/
+    public static Image miniklawa;
+
+    public static Image klawiatura2;
 
 
     public static void loadInitialImages() {
@@ -23,6 +27,9 @@ public class Parameters {
 
         klawiatura = loadImage("images/piano_keys.png");
 
+        miniklawa = loadImage("images/keys.png");
+
+        klawiatura2 = loadImage("images/piano_keys2.jpg");
 
         keys = new Image[17];
         keys[0] = loadImage("images/key0.png");

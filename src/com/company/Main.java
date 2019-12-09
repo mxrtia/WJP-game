@@ -18,7 +18,8 @@ public class Main {
 
     GameWindow gra=new GameWindow(gameWidth, gameHeight, xCenter, yCenter);
     gra.setVisible(true); //WYŚWIETLENIE TŁA
-
+	GamePanel gra1=new GamePanel(gameWidth, gameHeight);
+	gra1.add(GamePanel.zmianaKlawiatury);
 
     }
 }
