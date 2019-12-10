@@ -72,7 +72,7 @@ public class PianoTime {
                 }
             }
         }).start();
-    }//playSound()
+    }
 }
 
 

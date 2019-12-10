@@ -3,33 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/.picasa.ini" beforeDir="false" afterPath="$PROJECT_DIR$/images/.picasa.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/.picasa.ini" beforeDir="false" afterPath="$PROJECT_DIR$/images/.picasaoriginals/.picasa.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/keys.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/keys.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/keys.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/piano_keys2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/piano_keys2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parameters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/PianoTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PianoTime.java" afterDir="false" />
     </list>

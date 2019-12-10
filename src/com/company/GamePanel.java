@@ -15,8 +15,6 @@ public class GamePanel extends JPanel {
     public static JButton dzwiekiklawiatura;
     public static JButton blankklawiatura;
     public static JButton wyjscie;
-    public static JLabel label;
-
     public GameLevel gLevel;  //obiekt reprezentujący status gry
 
     //KONSTRUKTOR
@@ -30,7 +28,7 @@ public class GamePanel extends JPanel {
         super();
 
         gLevel = new GameLevel();
-        gLevel.reset();
+        gLevel.resetujparametry();
         menuFont=new Font("Tahoma",Font.PLAIN,30);
 
         this.Width=width;
@@ -38,7 +36,7 @@ public class GamePanel extends JPanel {
         barHeight=125;
         dzwiekiklawiatura = new JButton("Klawiatura z dźwiękami (domyślna)");
         blankklawiatura = new JButton("Klawiatura bez dźwięków");
-        wyjscie = new JButton("Wyjście");
+        wyjscie = new JButton("Wyjście z gry");
         JPanel panel = new JPanel(new GridLayout(3,2));
         //JPanel panel1 = new JPanel();
         //panel1.setBackground(Color.red);
@@ -102,14 +100,7 @@ public class GamePanel extends JPanel {
 
             }
         });
-
-
-
-
-
-
-
-        }//koniec GamePanel()
+    }
 
 
 
@@ -128,7 +119,6 @@ public class GamePanel extends JPanel {
         g.setColor(Color.darkGray);
         g.fillRect(0, Height-barHeight, Width, barHeight);
         g.setFont(menuFont);
-
 
         if(Parameters.pause){
             g.setColor(Color.white);

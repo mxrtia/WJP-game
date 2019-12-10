@@ -81,5 +81,5 @@ public class GameWindow extends JFrame {
         Parameters.loadInitialImages();
         Toolkit tk = Toolkit.getDefaultToolkit();
         add(new GamePanel(width,height)); //dodaj panel gry zawierający grafikę
-    }//koniec initGUI()
+    }
 }

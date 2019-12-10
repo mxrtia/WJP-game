@@ -5,7 +5,7 @@ public class GameLevel {
     public int level; //który poziom
     public double time; //czas gry w danym poziomie
 
-    public void reset(){ //resetuj parametry gry
+    public void resetujparametry(){ //resetuj parametry gry
         points = 0;
         level = 1;
         time = 0.0;
