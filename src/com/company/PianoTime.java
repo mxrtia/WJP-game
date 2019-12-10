@@ -43,19 +43,19 @@ public class PianoTime {
         playSound(new File("sounds/b.wav"));
     }
     public static void wlaczDzwiek13(){
-        playSound(new File("sounds/c.wav"));
+        playSound(new File("sounds/c1.wav"));
     }
     public static void wlaczDzwiek14(){
-        playSound(new File("sounds/cis.wav"));
+        playSound(new File("sounds/cis1.wav"));
     }
     public static void wlaczDzwiek15(){
-        playSound(new File("sounds/d.wav"));
+        playSound(new File("sounds/d1.wav"));
     }
     public static void wlaczDzwiek16(){
-        playSound(new File("sounds/dis.wav"));
+        playSound(new File("sounds/dis1.wav"));
     }
     public static void wlaczDzwiek17(){
-        playSound(new File("sounds/e.wav"));
+        playSound(new File("sounds/e1.wav"));
     }
 
 

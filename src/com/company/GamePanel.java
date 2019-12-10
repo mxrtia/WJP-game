@@ -5,19 +5,19 @@ import java.awt.event.*;
 import java.io.File;
 import javax.swing.*;
 import javax.sound.sampled.*;
+import javax.swing.border.Border;
 
 public class GamePanel extends JPanel {
     public int Width;
     public int Height;
     public int barHeight;
     public Font menuFont;
-    public static JButton zmianaKlawiatury;
+    public static JButton dzwiekiklawiatura;
+    public static JButton blankklawiatura;
+    public static JButton wyjscie;
     public static JLabel label;
 
-    public JPanel buttonPanel;
-
     public GameLevel gLevel;  //obiekt reprezentujący status gry
-
 
     //KONSTRUKTOR
     //KLASY
@@ -25,42 +25,79 @@ public class GamePanel extends JPanel {
     //GRAFICZNEGO
     //GRY
 
+
     public GamePanel(int width, int height) {
+        super();
 
         gLevel = new GameLevel();
         gLevel.reset();
-        menuFont=new Font("Dialog",Font.BOLD,36);
+        menuFont=new Font("Tahoma",Font.PLAIN,30);
 
         this.Width=width;
         this.Height=height;
         barHeight=125;
-        zmianaKlawiatury = new JButton("Zmiana klawiatury");
-        buttonPanel = this;
+        dzwiekiklawiatura = new JButton("Klawiatura z dźwiękami (domyślna)");
+        blankklawiatura = new JButton("Klawiatura bez dźwięków");
+        wyjscie = new JButton("Wyjście");
+        JPanel panel = new JPanel(new GridLayout(3,2));
+        //JPanel panel1 = new JPanel();
+        //panel1.setBackground(Color.red);
+        //this.add(panel1, BorderLayout.CENTER);
+        panel.setLocation(100, 100);
+        panel.add(dzwiekiklawiatura);
+        panel.add(blankklawiatura);
+        panel.add(wyjscie);
 
+        this.add(panel, BorderLayout.SOUTH); //WIDOCZNY PANEL
+        panel.setVisible(false);
 
+        setFocusable(true);
+        requestFocus();
+        wyjscie.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        } );
 
-        zmianaKlawiatury.setBounds(600, 400, 220, 30);
-        zmianaKlawiatury.setLayout(null);
-        add(zmianaKlawiatury);
+        blankklawiatura.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                getGraphics().drawImage(Parameters.klawiatura, 194, 305, null);
+            }
 
-        //JLabel label = new JLabel(new ImageIcon(Parameters.klawiatura2));
+        });
+        dzwiekiklawiatura.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                getGraphics().drawImage(Parameters.klawiatura2, 194, 305, null);
+            }
 
+        });
 
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent me){
                 if(me.getX()>1050 && me.getX()<1280 && me.getY()>(Height-barHeight)){
-                    System.exit(1);
+                    if(panel.isVisible()){
+                        panel.setVisible(false);
+                    }
+                    else{
+                    panel.setVisible(true);
+                    }
                 }
 
-                if(me.getX()>200 && me.getX()<265 && me.getY()>0 && me.getY()<1000){
+                /** BIAŁE KLAWISZE **/
+                if(me.getX()>195 && me.getX()<261 && me.getY()>305 && me.getY()<700){
                     PianoTime.wlaczDzwiek1();
                 }
-                if(me.getX()>265 && me.getX()<308 && me.getY()>0 && me.getY()<1000){
-                    PianoTime.wlaczDzwiek2();
-                }
-                if(me.getX()>309 && me.getX()<350 && me.getY()>0 && me.getY()<1000){
+                if(me.getX()>308 && me.getX()<349 && me.getY()>305 && me.getY()<700){
                     PianoTime.wlaczDzwiek3();
+                }
+
+                /** CZARNE KLAWISZE **/
+                if(me.getX()>262 && me.getX()<307 && me.getY()>305 && me.getY()<528){
+                    PianoTime.wlaczDzwiek2();
                 }
 
             }
@@ -69,50 +106,22 @@ public class GamePanel extends JPanel {
 
 
 
-    }//koniec GamePanel()
 
-    static class ZmianaKlawiatury extends JButton implements ActionListener {
 
-        ZmianaKlawiatury() {
-            super("Zmiana klawiatury");
-            addActionListener(this);
-        }
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
+        }//koniec GamePanel()
 
-        }
-    }
 
 
     @Override
-    protected void paintComponent(Graphics gs) {
+    public void paintComponent(Graphics gs) {
         Graphics2D g = (Graphics2D) gs;
         //LEPSZA JAKOŚĆ GRAFIKI (ANTYALIASING ETC.)
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.drawImage(Parameters.bgImage, 0, 0, null); //RYSOWANIE TŁA
 
-
-        //NARYSOWANIE TYMCZASOWEJ KLAWIATURY
         g.drawImage(Parameters.klawiatura2,194,305,null);
 
-        /*g.drawImage(Parameters.keys[0],198,305,null);
-        g.drawImage(Parameters.keys[1], 264, 305, null);
-        g.drawImage(Parameters.keys[2], 287, 304, null);
-        g.drawImage(Parameters.keys[3], 352, 305, null);
-        g.drawImage(Parameters.keys[4], 375, 304, null);
-        g.drawImage(Parameters.keys[5], 464, 305, null);
-        g.drawImage(Parameters.keys[6], 531, 305, null);
-        g.drawImage(Parameters.keys[7], 553, 304, null);
-        g.drawImage(Parameters.keys[8], 620, 305, null);
-        g.drawImage(Parameters.keys[9], 643, 304, null);
-        g.drawImage(Parameters.keys[10], 709, 304, null);
-        g.drawImage(Parameters.keys[11], 731, 304, null);
-        g.drawImage(Parameters.keys[12], 821, 305, null);
-        g.drawImage(Parameters.keys[13], 888, 305, null);
-        g.drawImage(Parameters.keys[14], 910, 304, null);
-        g.drawImage(Parameters.keys[15], 977, 305, null);
-        g.drawImage(Parameters.keys[16], 998, 304, null);*/
 
         g.drawImage(Parameters.miniklawa, 194, 240, null);
         //Ustaw kolor dolnego paska Menu i narysuj pasek
@@ -127,13 +136,11 @@ public class GamePanel extends JPanel {
         }
         else{
             g.setColor(Color.white);
-            g.drawString("Poziom 1", 75, Height-70);
-            g.drawString("Poziom 2", 325, Height-70);
-            g.drawString("Poziom 3", 575, Height-70);
-            g.drawString("Poziom 4", 825, Height-70);
-            g.drawString("Wyjście", 1075, Height-70);
-
-
+            g.drawString("POZIOM 1", 75, Height-70);
+            g.drawString("POZIOM 2", 325, Height-70);
+            g.drawString("POZIOM 3", 575, Height-70);
+            g.drawString("POZIOM 4", 825, Height-70);
+            g.drawString("OPCJE", 1075, Height-70);
         }
     }
 

@@ -54,8 +54,5 @@ public class Parameters {
     //metoda pobierająca obiekt klasy Image na podstawie ścieżki dostępu podanej jako String
     public static Image loadImage(String fileName) {
         return new ImageIcon(fileName).getImage();
-
     }
-
-
 }

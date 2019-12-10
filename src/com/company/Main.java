@@ -1,5 +1,7 @@
 package com.company;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class Main {
@@ -19,7 +21,5 @@ public class Main {
     GameWindow gra=new GameWindow(gameWidth, gameHeight, xCenter, yCenter);
     gra.setVisible(true); //WYŚWIETLENIE TŁA
 	GamePanel gra1=new GamePanel(gameWidth, gameHeight);
-	gra1.add(GamePanel.zmianaKlawiatury);
-
     }
 }
