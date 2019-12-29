@@ -29,7 +29,7 @@ public class Parameters {
 
         klawiatura2 = loadImage("images/piano_keys2.jpg");
 
-        /*
+
         keys = new Image[17];
         keys[0] = loadImage("images/key0.png");
         keys[1] = loadImage("images/key1.png");
@@ -47,7 +47,7 @@ public class Parameters {
         keys[13] = loadImage("images/key13.png");
         keys[14] = loadImage("images/key14.png");
         keys[15] = loadImage("images/key15.png");
-        keys[16] = loadImage("images/key16.png");*/
+        keys[16] = loadImage("images/key16.png");
     }
 
     //metoda pobierająca obiekt klasy Image na podstawie ścieżki dostępu podanej jako String

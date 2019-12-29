@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GameLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WJP-Piano_time.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WJP-Piano_time.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Parameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/PianoTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PianoTime.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
