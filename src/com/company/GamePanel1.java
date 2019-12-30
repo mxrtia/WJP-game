@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.sound.sampled.*;
 import javax.swing.border.Border;
 
-public class GamePanel extends JPanel {
+public class GamePanel1 extends JPanel {
     public int Width;
     public int Height;
     public int barHeight;
@@ -24,7 +24,7 @@ public class GamePanel extends JPanel {
     //GRY
 
 
-    public GamePanel(int width, int height) {
+    public GamePanel1(int width, int height) {
         super();
 
         gLevel = new GameLevel();
@@ -46,11 +46,9 @@ public class GamePanel extends JPanel {
         panel.add(blankklawiatura);
         panel.add(wyjscie);
 
-        this.add(panel, BorderLayout.SOUTH); //WIDOCZNY PANEL
+        //this.add(panel, BorderLayout.SOUTH); //WIDOCZNY PANEL
         panel.setVisible(false); //PANEL Z BUTTONAMI NA POCZĄTKU NIE JEST WIDOCZNY
 
-        setFocusable(true);
-        requestFocus();
 
         wyjscie.addActionListener(new ActionListener() {
             @Override
@@ -69,18 +67,6 @@ public class GamePanel extends JPanel {
 
         });
 
-        GamePanel.blankklawiatura.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //getGraphics().drawImage(Parameters.klawiatura, 194, 305, null);
-                //add(new GamePanel1(width,height));
-                GamePanel1 gp = new GamePanel1(width, height);
-                gp.setVisible(false);
-                repaint();
-            }
-
-        });
-
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent me){
@@ -89,7 +75,7 @@ public class GamePanel extends JPanel {
                         panel.setVisible(false);
                     }
                     else{
-                    panel.setVisible(true);
+                        panel.setVisible(true);
                     }
                 }
 
@@ -154,9 +140,4 @@ public class GamePanel extends JPanel {
             }
         });
     }
-
-
-
-}//koniec GamePanel
-
-
+}

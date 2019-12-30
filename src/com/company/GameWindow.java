@@ -1,12 +1,16 @@
 package com.company;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class GameWindow extends JFrame {
+    public static Image klawatest;
     public GameWindow(int width, int height, int x, int y)
     {
+
         super(); //utwórz okno
         setSize(width, height); //ustaw wymiary okna
         setResizable(false);
@@ -14,11 +18,21 @@ public class GameWindow extends JFrame {
         initGUI(width,height);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+/*********************/
+        /*JLabel img = new JLabel(new ImageIcon("images/key0.png"));
+        img.setBounds(642, 230, 100, 100); // x, y, width, height
+        add(img);
+        img.setVisible(false);*/
+/***********************/
+
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent ke) {
                 if (ke.getKeyCode() == KeyEvent.VK_Q) {
                     PianoTime.wlaczDzwiek1();
+                    //getGraphics().drawImage(Parameters.keys[0], 194, 305, null);
+                    //img.setVisible(true);
+
                 }
                 if (ke.getKeyCode() == KeyEvent.VK_2) {
                     PianoTime.wlaczDzwiek2();
@@ -69,6 +83,17 @@ public class GameWindow extends JFrame {
                     PianoTime.wlaczDzwiek17();
                 }
             }
+            @Override
+            public void keyReleased(KeyEvent ke) {
+                if (ke.getKeyCode() == KeyEvent.VK_Q) {
+                    getGraphics().drawImage(Parameters.klawiatura, 194, 315, null);
+                    //Parameters.klawiatura
+
+                }
+            }
+
+
+
         });
 
         //setUndecorated(false);
@@ -81,5 +106,8 @@ public class GameWindow extends JFrame {
         Parameters.loadInitialImages();
         Toolkit tk = Toolkit.getDefaultToolkit();
         add(new GamePanel(width,height)); //dodaj panel gry zawierający grafikę
+
+
+
     }
 }
