@@ -1,113 +1,81 @@
 package com.company;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class GameWindow extends JFrame {
-    public static Image klawatest;
-    public GameWindow(int width, int height, int x, int y)
-    {
 
-        super(); //utwórz okno
-        setSize(width, height); //ustaw wymiary okna
+    BufferedImage bimg;
+
+    GameWindow(String nazwa, int width, int height, int xCenter, int yCenter)
+    {
+        super(nazwa); //utwórz okno
+
+        int width2 = (int)width;
+        int height2 = (int)height;
         setResizable(false);
-        setVisible(true);
-        initGUI(width,height);
+        setSize(width2,height2);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-/*********************/
-        /*JLabel img = new JLabel(new ImageIcon("images/key0.png"));
-        img.setBounds(642, 230, 100, 100); // x, y, width, height
-        add(img);
-        img.setVisible(false);*/
-/***********************/
-
-        addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent ke) {
-                if (ke.getKeyCode() == KeyEvent.VK_Q) {
-                    PianoTime.wlaczDzwiek1();
-                    //getGraphics().drawImage(Parameters.keys[0], 194, 305, null);
-                    //img.setVisible(true);
-
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_2) {
-                    PianoTime.wlaczDzwiek2();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_W) {
-                    PianoTime.wlaczDzwiek3();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_3) {
-                    PianoTime.wlaczDzwiek4();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_E) {
-                    PianoTime.wlaczDzwiek5();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_R) {
-                    PianoTime.wlaczDzwiek6();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_5) {
-                    PianoTime.wlaczDzwiek7();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_T) {
-                    PianoTime.wlaczDzwiek8();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_6) {
-                    PianoTime.wlaczDzwiek9();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_Y) {
-                    PianoTime.wlaczDzwiek10();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_7) {
-                    PianoTime.wlaczDzwiek11();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_U) {
-                    PianoTime.wlaczDzwiek12();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_I) {
-                    PianoTime.wlaczDzwiek13();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_9) {
-                    PianoTime.wlaczDzwiek14();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_O) {
-                    PianoTime.wlaczDzwiek15();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_0) {
-                    PianoTime.wlaczDzwiek16();
-                }
-                if (ke.getKeyCode() == KeyEvent.VK_P) {
-                    PianoTime.wlaczDzwiek17();
-                }
-            }
-            @Override
-            public void keyReleased(KeyEvent ke) {
-                if (ke.getKeyCode() == KeyEvent.VK_Q) {
-                    getGraphics().drawImage(Parameters.klawiatura, 194, 315, null);
-                    //Parameters.klawiatura
-
-                }
-            }
-
-
-
-        });
-
-        //setUndecorated(false);
-        //setLocation(x,y); //ustaw pozycję okna
 
     }
-    private void initGUI(int width, int height){
-        setLayout(new GridLayout(1,1)); //ustaw rozkład
-        //ustaw zasoby i parametry początkowe
-        Parameters.loadInitialImages();
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        add(new GamePanel(width,height)); //dodaj panel gry zawierający grafikę
 
 
 
+
+
+    public void ButtonImage(JButton b, String file, int layoutX, int layoutY, boolean ramka)
+    {
+        try
+        {
+            bimg = ImageIO.read(new File(file));
+            int imagewidth = bimg.getWidth();
+            int imageheight= bimg.getHeight();
+            b.setSize(imagewidth,imageheight);
+            b.setIcon(new ImageIcon(bimg));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        b.setOpaque(false);
+        b.setContentAreaFilled(false);
+        b.setBorderPainted(ramka);
+        b.setLocation(new Point(layoutX,layoutY));
+        b.setVisible(true);
     }
+
+    public String GetFromFile(String file)
+    {
+        String fileAsString="";
+        try
+        {
+            InputStream is = new FileInputStream(file);
+            BufferedReader buf = new BufferedReader(new InputStreamReader(is));
+            String line = buf.readLine();
+            StringBuilder sb = new StringBuilder();
+
+            while (line != null) {
+                sb.append(line).append("\n");
+                line = buf.readLine();
+            }
+            fileAsString = sb.toString();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return fileAsString;
+    }
+
+
+
+
+
+
 }
