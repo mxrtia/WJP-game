@@ -56,10 +56,10 @@ public class Main {
 
 
 		//gra.ButtonImage(przejdzdooknagra, "images/start.png", 100, 0, true);
-		gra.ButtonImage(poziom1, "images/poziom1.png", 0,890,true);
-        gra.ButtonImage(poziom2, "images/poziom2.png", 320,890,true);
-        gra.ButtonImage(poziom3, "images/poziom3.png", 640,890,true);
-        gra.ButtonImage(poziom4, "images/poziom4.png", 959,890,true);
+		gra.ButtonImage(poziom1, "images/poziom1.png", 0,890, true);
+        gra.ButtonImage(poziom2, "images/poziom2.png", 320,890, true);
+        gra.ButtonImage(poziom3, "images/poziom3.png", 640,890, true);
+        gra.ButtonImage(poziom4, "images/poziom4.png", 959,890, true);
         gra.ButtonImage(opcje, "images/opcje.png", 1045,800, true);
 
 

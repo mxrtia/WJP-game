@@ -3,20 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom1class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom1class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/poziom2class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom2class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/poziom3class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom3class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/poziom4class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom4class.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

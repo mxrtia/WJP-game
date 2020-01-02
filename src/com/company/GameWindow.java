@@ -27,7 +27,7 @@ public class GameWindow extends JFrame {
 
 
 
-    public void ButtonImage(JButton b, String file, int layoutX, int layoutY, boolean ramka)
+    public void ButtonImage(JButton b, String file, int layoutX, int layoutY, boolean border)
     {
         try
         {
@@ -43,8 +43,8 @@ public class GameWindow extends JFrame {
         }
 
         b.setOpaque(false);
+        b.setBorderPainted(border);
         b.setContentAreaFilled(false);
-        b.setBorderPainted(ramka);
         b.setLocation(new Point(layoutX,layoutY));
         b.setVisible(true);
     }
