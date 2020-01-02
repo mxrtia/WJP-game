@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class GameWindow extends JFrame {
 
-    BufferedImage bimg;
+    BufferedImage zdjecie;
 
     GameWindow(String nazwa, int width, int height, int xCenter, int yCenter)
     {
@@ -23,19 +23,15 @@ public class GameWindow extends JFrame {
 
     }
 
-
-
-
-
     public void ButtonImage(JButton b, String file, int layoutX, int layoutY, boolean border)
     {
         try
         {
-            bimg = ImageIO.read(new File(file));
-            int imagewidth = bimg.getWidth();
-            int imageheight= bimg.getHeight();
+            zdjecie = ImageIO.read(new File(file));
+            int imagewidth = zdjecie.getWidth();
+            int imageheight= zdjecie.getHeight();
             b.setSize(imagewidth,imageheight);
-            b.setIcon(new ImageIcon(bimg));
+            b.setIcon(new ImageIcon(zdjecie));
         }
         catch(Exception e)
         {
@@ -48,34 +44,5 @@ public class GameWindow extends JFrame {
         b.setLocation(new Point(layoutX,layoutY));
         b.setVisible(true);
     }
-
-    public String GetFromFile(String file)
-    {
-        String fileAsString="";
-        try
-        {
-            InputStream is = new FileInputStream(file);
-            BufferedReader buf = new BufferedReader(new InputStreamReader(is));
-            String line = buf.readLine();
-            StringBuilder sb = new StringBuilder();
-
-            while (line != null) {
-                sb.append(line).append("\n");
-                line = buf.readLine();
-            }
-            fileAsString = sb.toString();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-
-        return fileAsString;
-    }
-
-
-
-
-
 
 }

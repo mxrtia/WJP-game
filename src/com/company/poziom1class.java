@@ -36,6 +36,8 @@ public class poziom1class implements ActionListener{
     public static JButton key17;
     public static JButton klawiatura;
     public static JButton miniklawa;
+    public static JButton start;
+    public static JButton wroc;
 
     public poziom1class(GameWindow gw, JButton opcje) {
         g = gw;
@@ -48,6 +50,9 @@ public class poziom1class implements ActionListener{
 
         klawiatura = new JButton();
         miniklawa = new JButton();
+        start = new JButton();
+        wroc = new JButton();
+
         key1 = new JButton();
         key2 = new JButton();
         key3 = new JButton();
@@ -75,14 +80,14 @@ public class poziom1class implements ActionListener{
         g.ButtonImage(key7, "images/key1t.png", 527, 285, false); //GOOD
         g.ButtonImage(key8, "images/key2t.png", 551,285, false); //GOOD
         g.ButtonImage(key9, "images/key1t.png", 616,285, false); //GOOD
-        g.ButtonImage(key10, "images/key2.png", 640, 285, false); //GOOD
-        g.ButtonImage(key11, "images/key1.png", 707, 285, false); //GOOD
-        g.ButtonImage(key12, "images/key4.png", 729, 285, false); //GOOD
-        g.ButtonImage(key13, "images/key0.png", 819, 285, false); //GOOD
-        g.ButtonImage(key14, "images/key1.png", 885, 285, false); //GOOD
-        g.ButtonImage(key15, "images/key2.png", 909, 285, false); //GOOD
-        g.ButtonImage(key16, "images/key1.png", 976, 285, false); //GOOD
-        g.ButtonImage(key17, "images/key4f.png", 999, 285, false); //GOOD
+        g.ButtonImage(key10, "images/key2t.png", 640, 285, false); //GOOD
+        g.ButtonImage(key11, "images/key1t.png", 707, 285, false); //GOOD
+        g.ButtonImage(key12, "images/key4t.png", 729, 285, false); //GOOD
+        g.ButtonImage(key13, "images/key0t.png", 819, 285, false); //GOOD
+        g.ButtonImage(key14, "images/key1t.png", 885, 285, false); //GOOD
+        g.ButtonImage(key15, "images/key2t.png", 909, 285, false); //GOOD
+        g.ButtonImage(key16, "images/key1t.png", 976, 285, false); //GOOD
+        g.ButtonImage(key17, "images/key4t.png", 999, 285, false); //GOOD
 
         key1.setVisible(false);
         key2.setVisible(false);
@@ -127,16 +132,27 @@ public class poziom1class implements ActionListener{
 
         g.add(klawiatura);
         g.add(miniklawa);
+        g.add(start);
+        g.add(wroc);
         g.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 285, false);
         g.ButtonImage(miniklawa, "images/keys.png",190, 220, false);
+        g.ButtonImage(start, "images/start.png", 432, 700, true);
+        g.ButtonImage(wroc, "images/wroc.png", 800, 890, true);
         //poziom1.setVisible(false);
         poziom2.setVisible(false);
         poziom3.setVisible(false);
         poziom4.setVisible(false);
+        opcje.setVisible(true);
+
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         manager.addKeyEventDispatcher(new MyDispatcher());
+
+
     }
+
+
+
 
     public static class MyDispatcher implements KeyEventDispatcher {
         @Override
