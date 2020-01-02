@@ -23,6 +23,9 @@ public class poziom3class implements ActionListener{
         this.poziom3=Main.poziom3;
         this.poziom4=Main.poziom4;
 
+        KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
+
 }
 
     //co się stanie jak klikniesz poziom3???
