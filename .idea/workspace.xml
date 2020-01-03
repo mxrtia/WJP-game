@@ -3,11 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/opcje.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/opcje.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wroc.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/wroc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Parameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/menuglowne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/menuglowne.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Parameters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/menuglowne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/menuglowne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom1class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom1class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom2class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom2class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom3class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom3class.java" afterDir="false" />

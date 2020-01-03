@@ -39,6 +39,7 @@ public class poziom3class implements ActionListener{
     public static JButton klawiaturabezdzwiekow;
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
+    public static JTextArea informacja;
 
     public poziom3class(GameWindow gw, JButton opcje)
     {
@@ -74,6 +75,7 @@ public class poziom3class implements ActionListener{
         this.klawiaturabezdzwiekow = Main.klawiaturabezdzwiekow;
         this.klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         this.wyjscie = Main.wyjscie;
+        this.informacja = Main.informacja;
 
         wroc.addActionListener(new menuglowne(gw));
 
@@ -111,6 +113,7 @@ public class poziom3class implements ActionListener{
         miniklawa.setVisible(true);
         start.setVisible(true);
         wroc.setVisible(true);
+        informacja.setVisible(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());

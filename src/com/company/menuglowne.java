@@ -19,6 +19,7 @@ public class menuglowne implements ActionListener {
     public static JButton klawiaturabezdzwiekow;
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
+    public static JTextArea informacja;
 
 
     public menuglowne(GameWindow gw){
@@ -36,6 +37,7 @@ public class menuglowne implements ActionListener {
         klawiaturabezdzwiekow = Main.klawiaturabezdzwiekow;
         klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         wyjscie = Main.wyjscie;
+        informacja = Main.informacja;
     }
 
     public void actionPerformed(ActionEvent e)
@@ -56,5 +58,6 @@ public class menuglowne implements ActionListener {
         poziom3.setLocation(640, 890);
         poziom4.setVisible(true);
         poziom4.setLocation(959, 890);
+        informacja.setVisible(true);
     }
 }

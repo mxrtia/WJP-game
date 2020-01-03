@@ -40,6 +40,7 @@ public class Main {
     public static JButton key15;
     public static JButton key16;
     public static JButton key17;
+    public static JTextArea informacja;
 
     public static void main(String[] args) {
 	int gameWidth =  1280;
@@ -93,6 +94,8 @@ public class Main {
         key15 = new JButton();
         key16 = new JButton();
         key17 = new JButton();
+        informacja = new JTextArea();
+        informacja.setEditable(false);
 
 		poziom1.addActionListener(new poziom1class(gra));
 		poziom2.addActionListener(new poziom2class(gra, opcje));
@@ -104,30 +107,36 @@ public class Main {
         gra.ButtonImage(poziom3, "images/poziom3.png", 640,890, true);
         gra.ButtonImage(poziom4, "images/poziom4.png", 959,890, true);
         gra.ButtonImage(opcje, "images/opcje.png", 1060,890, true);
-        gra.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 285, false);
-        gra.ButtonImage(miniklawa, "images/keys.png",190, 220, false);
+        gra.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 275, false);
+        gra.ButtonImage(miniklawa, "images/keys.png",190, 210, false);
         gra.ButtonImage(start, "images/start.png", 432, 700, true);
         gra.ButtonImage(wroc, "images/wroc.png", 1060, 939, true);
         gra.ButtonImage(klawiaturabezdzwiekow, "images/klawiaturabezdzwiekow.png", 1008, 814, true);
         gra.ButtonImage(klawiaturazdzwiekami, "images/klawiaturazdzwiekami.png", 1008, 745, true);
         gra.ButtonImage(wyjscie, "images/wyjscie.png", 1008, 676, true);
-        gra.ButtonImage(key1, "images/key0t.png", 190, 285, false); //GOOD
-        gra.ButtonImage(key2, "images/key1t.png", 258, 285, false); //GOOD
-        gra.ButtonImage(key3, "images/key2t.png", 280,285, false); //GOOD
-        gra.ButtonImage(key4, "images/key1t.png", 347,285, false); //GOOD
-        gra.ButtonImage(key5, "images/key4t.png", 370,285, false); //GOOD
-        gra.ButtonImage(key6, "images/key0t.png", 461, 285, false); //GOOD
-        gra.ButtonImage(key7, "images/key1t.png", 527, 285, false); //GOOD
-        gra.ButtonImage(key8, "images/key2t.png", 551,285, false); //GOOD
-        gra.ButtonImage(key9, "images/key1t.png", 616,285, false); //GOOD
-        gra.ButtonImage(key10, "images/key2t.png", 640, 285, false); //GOOD
-        gra.ButtonImage(key11, "images/key1t.png", 707, 285, false); //GOOD
-        gra.ButtonImage(key12, "images/key4t.png", 729, 285, false); //GOOD
-        gra.ButtonImage(key13, "images/key0t.png", 819, 285, false); //GOOD
-        gra.ButtonImage(key14, "images/key1t.png", 885, 285, false); //GOOD
-        gra.ButtonImage(key15, "images/key2t.png", 909, 285, false); //GOOD
-        gra.ButtonImage(key16, "images/key1t.png", 976, 285, false); //GOOD
-        gra.ButtonImage(key17, "images/key4t.png", 999, 285, false); //GOOD
+        gra.ButtonImage(key1, "images/key0t.png", 190, 275, false); //GOOD
+        gra.ButtonImage(key2, "images/key1t.png", 258, 275, false); //GOOD
+        gra.ButtonImage(key3, "images/key2t.png", 280,275, false); //GOOD
+        gra.ButtonImage(key4, "images/key1t.png", 347,275, false); //GOOD
+        gra.ButtonImage(key5, "images/key4t.png", 370,275, false); //GOOD
+        gra.ButtonImage(key6, "images/key0t.png", 461, 275, false); //GOOD
+        gra.ButtonImage(key7, "images/key1t.png", 527, 275, false); //GOOD
+        gra.ButtonImage(key8, "images/key2t.png", 551,275, false); //GOOD
+        gra.ButtonImage(key9, "images/key1t.png", 616,275, false); //GOOD
+        gra.ButtonImage(key10, "images/key2t.png", 640, 275, false); //GOOD
+        gra.ButtonImage(key11, "images/key1t.png", 707, 275, false); //GOOD
+        gra.ButtonImage(key12, "images/key4t.png", 729, 275, false); //GOOD
+        gra.ButtonImage(key13, "images/key0t.png", 819, 275, false); //GOOD
+        gra.ButtonImage(key14, "images/key1t.png", 885, 275, false); //GOOD
+        gra.ButtonImage(key15, "images/key2t.png", 909, 275, false); //GOOD
+        gra.ButtonImage(key16, "images/key1t.png", 976, 275, false); //GOOD
+        gra.ButtonImage(key17, "images/key4t.png", 999, 275, false); //GOOD
+        informacja.setText("Witaj w grze PianoTime! \nGrając w PianoTime możesz ćwiczyć swoją zręczność, \nkoncentrację oraz nauczyć się podstaw gry na pianinie.\nAby zacząć, wybierz poziom i kliknij przycisk 'Rozpocznij grę'.    ");
+        Font czcionka = new Font ("Impact", Font.PLAIN, 40);
+        informacja.setFont(czcionka);
+        informacja.setForeground(Color.white);
+        informacja.setBounds(100, 600, 1000, 500);
+        informacja.setOpaque(false);
 
         gra.add(klawiaturazdzwiekami);
         gra.add(klawiaturabezdzwiekow);
@@ -158,6 +167,7 @@ public class Main {
         gra.add(key15);
         gra.add(key16);
         gra.add(key17);
+        gra.add(informacja);
 
         klawiaturazdzwiekami.setVisible(false);
         klawiaturabezdzwiekow.setVisible(false);
@@ -184,6 +194,7 @@ public class Main {
         key15.setVisible(false);
         key16.setVisible(false);
         key17.setVisible(false);
+        informacja.setVisible(true);
 
     	gra.setVisible(true); //WYŚWIETLENIE LABELU Z TŁEM GŁÓWNYM
 
@@ -223,7 +234,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                gra.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 285, false);
+                gra.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 275, false);
             }
 
         });
@@ -232,7 +243,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                gra.ButtonImage(klawiatura, "images/piano_keys.png", 190, 285, false);
+                gra.ButtonImage(klawiatura, "images/piano_keys.png", 190, 275, false);
             }
 
         });

@@ -41,6 +41,7 @@ public class poziom1class implements ActionListener{
     public static JButton klawiaturabezdzwiekow;
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
+    public static JTextArea informacja;
 
     public poziom1class(GameWindow gw) {
         g = gw;
@@ -74,6 +75,7 @@ public class poziom1class implements ActionListener{
         this.klawiaturabezdzwiekow = Main.klawiaturabezdzwiekow;
         this.klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         this.wyjscie = Main.wyjscie;
+        this.informacja = Main.informacja;
 
         wroc.addActionListener(new menuglowne(gw));
     }
@@ -109,9 +111,24 @@ public class poziom1class implements ActionListener{
         miniklawa.setVisible(true);
         start.setVisible(true);
         wroc.setVisible(true);
+        informacja.setVisible(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         manager.addKeyEventDispatcher(new MyDispatcher());
+
+        start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                start.setVisible(false);
+                //restart.setVisible(true);
+                //timer start
+                //if (e.getID() == KeyEvent.KEY_PRESSED && e.getKeyCode() == KeyEvent.VK_Q)
+                //int[] sequence = {UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B};
+                //int currentButton = 0;
+            }
+
+        });
 
     }
 
