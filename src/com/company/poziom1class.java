@@ -6,11 +6,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.security.Key;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class poziom1class implements ActionListener{
 
-    public GameWindow g;
-    public static GameWindow w;
+    public static Main main;
+    public static GameWindow g;
     public JButton poziom1;
     public static JButton poziom2;
     public static JButton poziom3;
@@ -42,6 +44,45 @@ public class poziom1class implements ActionListener{
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
     public static JTextArea informacja;
+    public static JButton arrow;
+    public static JTextArea koniec;
+
+
+    public static int keyeventy[]={KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+            KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
+            KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
+            KeyEvent.VK_E, KeyEvent.VK_W, KeyEvent.VK_W,
+            KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+            KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
+            KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
+            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q,
+            KeyEvent.VK_W, KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_Q,
+            KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_Q,
+            KeyEvent.VK_W, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
+            KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_W,
+            KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+            KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
+            KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
+            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER};
+    public static int XPos[]={396, 459, 564,
+            564, 459, 396, 296,
+            190, 190, 296, 396,
+            396, 296, 296,
+            396, 396, 459, 564,
+            564, 459, 396, 296,
+            190, 190, 296, 396,
+            296, 190, 190,
+            296, 296, 396, 190,
+            296, 396, 459, 396, 190,
+            296, 396, 459, 396, 296,
+            190, 296, 296,
+            396, 396, 459, 564,
+            564, 459, 396, 296,
+            190, 190, 296, 396,
+            296, 190, 190, 2000};
+
+    public static int counter = 0;
+    public static int last = 62;
 
     public poziom1class(GameWindow gw) {
         g = gw;
@@ -76,7 +117,20 @@ public class poziom1class implements ActionListener{
         this.klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         this.wyjscie = Main.wyjscie;
         this.informacja = Main.informacja;
+        this.arrow = Main.arrow;
 
+        koniec = new JTextArea();
+        koniec.setEditable(false);
+        koniec.setText("Gratulacje! Udało ci się ukończyć poziom. \nTwój wynik: PTS \nTwój czas: s");
+        Font czcionka = new Font ("Impact", Font.PLAIN, 40);
+        koniec.setFont(czcionka);
+        koniec.setForeground(Color.white);
+        koniec.setBounds(100, 600, 1000, 500);
+        koniec.setOpaque(false);
+        koniec.setVisible(false);
+
+
+        g.ButtonImage(arrow, "images/arrow.png", 396, 135, false);
         wroc.addActionListener(new menuglowne(gw));
     }
 
@@ -84,6 +138,9 @@ public class poziom1class implements ActionListener{
     public void actionPerformed(ActionEvent e)
     {
         g.add(klawiatura);
+        g.add(arrow);
+        g.add(koniec);
+
 
         klawiatura.setVisible(true);
         key1.setVisible(false);
@@ -123,18 +180,22 @@ public class poziom1class implements ActionListener{
                 start.setVisible(false);
                 //restart.setVisible(true);
                 //timer start
-                //if (e.getID() == KeyEvent.KEY_PRESSED && e.getKeyCode() == KeyEvent.VK_Q)
-                //int[] sequence = {UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B};
-                //int currentButton = 0;
+                arrow.setVisible(true);
+
             }
-
         });
-
     }
 
-    public static class MyDispatcher implements KeyEventDispatcher {
+
+    public class MyDispatcher implements KeyEventDispatcher {
+
+
+
+
         @Override
         public boolean dispatchKeyEvent(KeyEvent ke) {
+
+
             if (ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == KeyEvent.VK_Q) {
                 PianoTime.wlaczDzwiek1();
                 key1.setVisible(true);
@@ -254,6 +315,27 @@ public class poziom1class implements ActionListener{
             if(ke.getID() == KeyEvent.KEY_RELEASED && ke.getKeyCode() == KeyEvent.VK_P){
                 key17.setVisible(false);
             }
+
+            /*****************************************************/
+
+
+            if(counter != last)
+            {
+                if(ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy[counter]){
+                    arrow.setLocation(XPos[counter], 135);
+                    counter++;
+                    System.out.println(counter);
+                    if(counter == 62)
+                    {
+                        poziom1.setVisible(false);
+                        miniklawa.setVisible(false);
+                        klawiatura.setVisible(false);
+                        koniec.setVisible(true);
+                        opcje.setVisible(false);
+                    }
+                }
+            }
+            //System.out.println(keyeventy[counter]);
             return false;
         }
 

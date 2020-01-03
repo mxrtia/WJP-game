@@ -41,6 +41,7 @@ public class Main {
     public static JButton key16;
     public static JButton key17;
     public static JTextArea informacja;
+    public static JButton arrow;
 
     public static void main(String[] args) {
 	int gameWidth =  1280;
@@ -96,6 +97,7 @@ public class Main {
         key17 = new JButton();
         informacja = new JTextArea();
         informacja.setEditable(false);
+        arrow = new JButton();
 
 		poziom1.addActionListener(new poziom1class(gra));
 		poziom2.addActionListener(new poziom2class(gra, opcje));
@@ -168,6 +170,7 @@ public class Main {
         gra.add(key16);
         gra.add(key17);
         gra.add(informacja);
+        gra.add(arrow);
 
         klawiaturazdzwiekami.setVisible(false);
         klawiaturabezdzwiekow.setVisible(false);
@@ -195,6 +198,7 @@ public class Main {
         key16.setVisible(false);
         key17.setVisible(false);
         informacja.setVisible(true);
+        arrow.setVisible(false);
 
     	gra.setVisible(true); //WYŚWIETLENIE LABELU Z TŁEM GŁÓWNYM
 

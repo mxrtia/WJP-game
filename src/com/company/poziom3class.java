@@ -116,6 +116,6 @@ public class poziom3class implements ActionListener{
         informacja.setVisible(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
+        //manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
     }
 }
