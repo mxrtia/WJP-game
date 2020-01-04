@@ -39,7 +39,7 @@ public class poziom1class implements ActionListener{
     public static JButton klawiatura;
     public static JButton miniklawa;
     public static JButton start;
-    public static JButton wroc;
+    //public static JButton wroc;
     public static JButton klawiaturabezdzwiekow;
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
@@ -47,8 +47,36 @@ public class poziom1class implements ActionListener{
     public static JButton arrow;
     public static JTextArea koniec;
 
+    /** POZIOM 1 **/
+    public static int keyeventy[]={KeyEvent.VK_Y, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+            KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
+            KeyEvent.VK_W, KeyEvent.VK_R, KeyEvent.VK_Y,
+            KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E,
+            KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+            KeyEvent.VK_Y, KeyEvent.VK_R, KeyEvent.VK_W,
+            KeyEvent.VK_T, KeyEvent.VK_7, KeyEvent.VK_O,
+            KeyEvent.VK_I, KeyEvent.VK_7, KeyEvent.VK_Y,
+            KeyEvent.VK_R, KeyEvent.VK_Y, KeyEvent.VK_T,
+            KeyEvent.VK_R, KeyEvent.VK_E,
+            KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_Y,
+            KeyEvent.VK_R, KeyEvent.VK_W, KeyEvent.VK_ENTER}; //36 elementów
+    public static int XPos[]={396, 459, 564,
+            459, 396, 296,
+            296, 459, 653,
+            564, 459, 396,
+            396, 459, 564,
+            653, 459, 296,
+            564, 698, 925, 819, 698, 653,
+            459, 653, 564, 459, 396,
+            396, 459, 564, 653,
+            459, 296, 396}; //37 elementów, 1 w poprzednim, (36 + 1 pusty)
 
-    public static int keyeventy[]={KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+    public static int counter = 0;
+    public static int last = 36;
+
+    /** POZIOM 2 **/
+
+    public static int keyeventy2[]={KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
             KeyEvent.VK_E, KeyEvent.VK_W, KeyEvent.VK_W,
@@ -63,8 +91,8 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
-            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER};
-    public static int XPos[]={396, 459, 564,
+            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER}; //63 elementy (62+jeden pusty)
+    public static int XPos2[]={396, 459, 564,
             564, 459, 396, 296,
             190, 190, 296, 396,
             396, 296, 296,
@@ -79,10 +107,13 @@ public class poziom1class implements ActionListener{
             396, 396, 459, 564,
             564, 459, 396, 296,
             190, 190, 296, 396,
-            296, 190, 190, 2000};
+            296, 190, 190, 653}; //62 elementy (1 w mainie, 61+jeden do następnego)
 
-    public static int counter = 0;
-    public static int last = 62;
+    public static int counter2 = 0;
+    public static int last2 = 62;
+
+    /** POZIOM 3 **/
+
 
     public poziom1class(GameWindow gw) {
         g = gw;
@@ -92,7 +123,6 @@ public class poziom1class implements ActionListener{
         this.poziom3 = Main.poziom3;
         this.poziom4 = Main.poziom4;
         this.opcje = Main.opcje;
-        this.wroc = Main.wroc;
         this.klawiatura = Main.klawiatura;
         this.miniklawa = Main.miniklawa;
         this.start = Main.start;
@@ -130,8 +160,7 @@ public class poziom1class implements ActionListener{
         koniec.setVisible(false);
 
 
-        g.ButtonImage(arrow, "images/arrow.png", 396, 135, false);
-        wroc.addActionListener(new menuglowne(gw));
+        g.ButtonImage(arrow, "images/arrow.png", 653, 135, false);
     }
 
     //co się stanie jak klikniesz poziom1???
@@ -167,7 +196,6 @@ public class poziom1class implements ActionListener{
         opcje.setVisible(true);
         miniklawa.setVisible(true);
         start.setVisible(true);
-        wroc.setVisible(true);
         informacja.setVisible(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
@@ -184,6 +212,7 @@ public class poziom1class implements ActionListener{
 
             }
         });
+
     }
 
 
@@ -316,29 +345,46 @@ public class poziom1class implements ActionListener{
                 key17.setVisible(false);
             }
 
-            /*****************************************************/
 
-
-            if(counter != last)
-            {
-                if(ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy[counter]){
-                    arrow.setLocation(XPos[counter], 135);
-                    counter++;
-                    System.out.println(counter);
-                    if(counter == 62)
-                    {
-                        poziom1.setVisible(false);
-                        miniklawa.setVisible(false);
-                        klawiatura.setVisible(false);
-                        koniec.setVisible(true);
-                        opcje.setVisible(false);
+            if(poziom1.isVisible()) {
+                if (counter != last) {
+                    if (ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy[counter]) {
+                        arrow.setLocation(XPos[counter], 135);
+                        counter++;
+                        System.out.println(counter);
+                        if (counter == 36) {
+                            poziom1.setVisible(false);
+                            miniklawa.setVisible(false);
+                            klawiatura.setVisible(false);
+                            koniec.setVisible(true);
+                            poziom2.setVisible(true);
+                            opcje.setVisible(false);
+                            arrow.setVisible(false);
+                        }
+                    }
+                }
+            }
+            if(poziom2.isVisible()) {
+                if (counter2 != last2) {
+                    if (ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy2[counter2]) {
+                        arrow.setLocation(XPos2[counter2], 135);
+                        counter2++;
+                        System.out.println(counter2);
+                        if (counter2 == 62) {
+                            poziom2.setVisible(false);
+                            miniklawa.setVisible(false);
+                            klawiatura.setVisible(false);
+                            koniec.setVisible(true);
+                            poziom3.setVisible(true);
+                            opcje.setVisible(false);
+                            arrow.setVisible(false);
+                        }
                     }
                 }
             }
             //System.out.println(keyeventy[counter]);
             return false;
         }
-
     }
 
 }
