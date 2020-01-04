@@ -59,7 +59,7 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_R, KeyEvent.VK_Y, KeyEvent.VK_T,
             KeyEvent.VK_R, KeyEvent.VK_E,
             KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_Y,
-            KeyEvent.VK_R, KeyEvent.VK_W, KeyEvent.VK_ENTER}; //36 elementów
+            KeyEvent.VK_R, KeyEvent.VK_W, KeyEvent.VK_ENTER}; //36 elementów + enter = 37 elementów
     public static int XPos[]={396, 459, 564,
             459, 396, 296,
             296, 459, 653,
@@ -69,7 +69,7 @@ public class poziom1class implements ActionListener{
             564, 698, 925, 819, 698, 653,
             459, 653, 564, 459, 396,
             396, 459, 564, 653,
-            459, 296, 396}; //37 elementów, 1 w poprzednim, (36 + 1 pusty)
+            459, 296, /*pierwszy dźwięk poziom2*/396}; //(36 niebieskich elementów(35+1poziom2) [+ 1 w mainie])
 
     public static int counter = 0;
     public static int last = 36;
@@ -91,7 +91,7 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
-            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER}; //63 elementy (62+jeden pusty)
+            KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER}; //62 elementy + enter = 63 elementy
     public static int XPos2[]={396, 459, 564,
             564, 459, 396, 296,
             190, 190, 296, 396,
@@ -107,12 +107,88 @@ public class poziom1class implements ActionListener{
             396, 396, 459, 564,
             564, 459, 396, 296,
             190, 190, 296, 396,
-            296, 190, 190, 653}; //62 elementy (1 w mainie, 61+jeden do następnego)
+            296, 190, 190, 190}; //62 elementy (1 w poziomie1, 62+jeden do następnego)
 
     public static int counter2 = 0;
     public static int last2 = 62;
 
     /** POZIOM 3 **/
+
+    public static int keyeventy3[]={KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_Q,
+            KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_W,
+            KeyEvent.VK_W, KeyEvent.VK_W, KeyEvent.VK_7, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_E,
+            KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_7, KeyEvent.VK_T, KeyEvent.VK_Y,
+            KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_Q,
+            KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_W,
+            KeyEvent.VK_W, KeyEvent.VK_W, KeyEvent.VK_7, KeyEvent.VK_Y, KeyEvent.VK_T,
+            KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_I,
+            KeyEvent.VK_O, KeyEvent.VK_I, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_I,
+            KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y, //51
+            KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y,
+            KeyEvent.VK_Y, KeyEvent.VK_I, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_Y,
+            KeyEvent.VK_7, KeyEvent.VK_7, KeyEvent.VK_7, KeyEvent.VK_7,
+            KeyEvent.VK_7, KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y,
+            KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_I,
+            KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y,
+            KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y, //79
+            KeyEvent.VK_Y, KeyEvent.VK_I, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_Y,
+            KeyEvent.VK_7, KeyEvent.VK_7, KeyEvent.VK_7, KeyEvent.VK_7,
+            KeyEvent.VK_7, KeyEvent.VK_Y, KeyEvent.VK_Y, KeyEvent.VK_Y,
+            KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_7, KeyEvent.VK_T, KeyEvent.VK_R,
+            KeyEvent.VK_ENTER}; //97 elementów + enter = 98 elementów
+
+    public static int XPos3[]={653, 564, 459, 190,
+            190, 190, 653, 564, 459, 296,
+            296, 296, 698, 653, 564, 396,
+            819, 819, 698, 564, 653,
+            190, 653, 564, 459, 190,
+            190, 190, 653, 564, 459, 296,
+            296, 296, 698, 653, 564,
+            819, 819, 819, 819,
+            925, 819, 653, 564, 459, 819,
+            653, 653, 653,
+            653, 653, 653,
+            653, 819, 459, 564, 653,
+            698, 698, 698, 698,
+            698, 653, 653, 653,
+            653, 564, 564, 459, 564, 819,
+            653, 653, 653,
+            653, 653, 653,
+            653, 819, 459, 564, 653,
+            698, 698, 698, 698,
+            698, 653, 653, 653,
+            819, 819, 698, 564, 459, 1020}; //97 elementów (1 w poziomie2, 97+jeden do następnego)
+
+    public static int counter3 = 0;
+    public static int last3 = 97;
+
+    /** POZIOM 4 **/
+
+    public static int keyeventy4[]={KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P,
+            KeyEvent.VK_U, KeyEvent.VK_O, KeyEvent.VK_I, KeyEvent.VK_Y,
+            KeyEvent.VK_Q, KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U,
+            KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U, KeyEvent.VK_I,
+            KeyEvent.VK_E, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P,
+            KeyEvent.VK_U, KeyEvent.VK_O, KeyEvent.VK_I, KeyEvent.VK_Y,
+            KeyEvent.VK_Q, KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U,
+            KeyEvent.VK_E, KeyEvent.VK_I, KeyEvent.VK_U, KeyEvent.VK_Y,
+            KeyEvent.VK_U, KeyEvent.VK_I, KeyEvent.VK_O, KeyEvent.VK_P,
+            KeyEvent.VK_P, KeyEvent.VK_P, KeyEvent.VK_O, KeyEvent.VK_O,
+            KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_U,
+            KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P,
+            KeyEvent.VK_U, KeyEvent.VK_O, KeyEvent.VK_I, KeyEvent.VK_Y,
+            KeyEvent.VK_Q, KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U,
+            KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U, KeyEvent.VK_I,
+            KeyEvent.VK_E, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P, KeyEvent.VK_0, KeyEvent.VK_P,
+            KeyEvent.VK_U, KeyEvent.VK_O, KeyEvent.VK_I, KeyEvent.VK_Y,
+            KeyEvent.VK_Q, KeyEvent.VK_E, KeyEvent.VK_Y, KeyEvent.VK_U,
+            KeyEvent.VK_E, KeyEvent.VK_I, KeyEvent.VK_U, KeyEvent.VK_Y, KeyEvent.VK_ENTER}; // 81 elementów + enter
+
+    public static int XPos4[]={969, 1020, 969, 1020,
+            744, 929, 819, 653}; //82 elementy (1 w mainie, 61+jeden do następnego)
+
+    public static int counter4 = 0;
+    public static int last4 = 81;
 
 
     public poziom1class(GameWindow gw) {
@@ -215,11 +291,7 @@ public class poziom1class implements ActionListener{
 
     }
 
-
     public class MyDispatcher implements KeyEventDispatcher {
-
-
-
 
         @Override
         public boolean dispatchKeyEvent(KeyEvent ke) {
@@ -376,6 +448,42 @@ public class poziom1class implements ActionListener{
                             klawiatura.setVisible(false);
                             koniec.setVisible(true);
                             poziom3.setVisible(true);
+                            opcje.setVisible(false);
+                            arrow.setVisible(false);
+                        }
+                    }
+                }
+            }
+            if(poziom3.isVisible()) {
+                if (counter3 != last3) {
+                    if (ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy3[counter3]) {
+                        arrow.setLocation(XPos3[counter3], 135);
+                        counter3++;
+                        System.out.println(counter3);
+                        if (counter3 == 97) {
+                            poziom3.setVisible(false);
+                            miniklawa.setVisible(false);
+                            klawiatura.setVisible(false);
+                            koniec.setVisible(true);
+                            poziom4.setVisible(true);
+                            opcje.setVisible(false);
+                            arrow.setVisible(false);
+                        }
+                    }
+                }
+            }
+            if(poziom4.isVisible()) {
+                if (counter4 != last4) {
+                    if (ke.getID() == KeyEvent.KEY_PRESSED && ke.getKeyCode() == keyeventy4[counter4]) {
+                        arrow.setLocation(XPos4[counter4], 135);
+                        counter4++;
+                        System.out.println(counter4);
+                        if (counter4 == 81) {
+                            poziom3.setVisible(false);
+                            miniklawa.setVisible(false);
+                            klawiatura.setVisible(false);
+                            koniec.setVisible(true);
+                            //poziom4.setVisible(true);
                             opcje.setVisible(false);
                             arrow.setVisible(false);
                         }

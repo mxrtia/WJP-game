@@ -35,11 +35,12 @@ public class poziom3class implements ActionListener{
     public static JButton klawiatura;
     public static JButton miniklawa;
     public static JButton start;
-    public static JButton wroc;
     public static JButton klawiaturabezdzwiekow;
     public static JButton klawiaturazdzwiekami;
     public static JButton wyjscie;
     public static JTextArea informacja;
+    public static JTextArea koniec;
+
 
     public poziom3class(GameWindow gw, JButton opcje)
     {
@@ -51,7 +52,6 @@ public class poziom3class implements ActionListener{
         this.poziom3 = Main.poziom3;
         this.poziom4 = Main.poziom4;
         this.opcje = Main.opcje;
-        this.wroc = Main.wroc;
         this.klawiatura = Main.klawiatura;
         this.miniklawa = Main.miniklawa;
         this.start = Main.start;
@@ -76,8 +76,7 @@ public class poziom3class implements ActionListener{
         this.klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         this.wyjscie = Main.wyjscie;
         this.informacja = Main.informacja;
-
-        wroc.addActionListener(new menuglowne(gw));
+        this.koniec = poziom1class.koniec;
 
     }
 
@@ -112,8 +111,8 @@ public class poziom3class implements ActionListener{
         opcje.setVisible(true);
         miniklawa.setVisible(true);
         start.setVisible(true);
-        wroc.setVisible(true);
         informacja.setVisible(false);
+        koniec.setVisible(false);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
         //manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
