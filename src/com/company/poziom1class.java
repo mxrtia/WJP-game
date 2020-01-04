@@ -185,7 +185,24 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_E, KeyEvent.VK_I, KeyEvent.VK_U, KeyEvent.VK_Y, KeyEvent.VK_ENTER}; // 81 elementów + enter
 
     public static int XPos4[]={969, 1020, 969, 1020,
-            744, 929, 819, 653}; //82 elementy (1 w mainie, 61+jeden do następnego)
+            744, 929, 819, 653,
+            190, 396, 653, 744,
+            396, 653, 744, 819,
+            396, 1020, 969, 1020, 969, 1020,
+            744, 929, 819, 653,
+            190, 396, 653, 744, //30
+            396, 819, 744, 653,
+            744, 819, 925, 1020,
+            1020, 1020, 925, 925,
+            819, 819, 744,
+            1020, 969, 1020, 969, 1020, //50
+            744, 929, 819, 653,
+            190, 396, 653, 744,
+            396, 653, 744, 819,
+            396, 1020, 969, 1020, 969, 1020,
+            744, 929, 819, 653,
+            190, 396, 653, 744,
+            396, 819, 744, 653, 1400}; //82 elementy (1 w mainie, 61+jeden do następnego)
 
     public static int counter4 = 0;
     public static int last4 = 81;
@@ -483,7 +500,7 @@ public class poziom1class implements ActionListener{
                             miniklawa.setVisible(false);
                             klawiatura.setVisible(false);
                             koniec.setVisible(true);
-                            //poziom4.setVisible(true);
+                            poziom4.setVisible(false);
                             opcje.setVisible(false);
                             arrow.setVisible(false);
                         }
