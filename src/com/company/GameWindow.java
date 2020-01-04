@@ -8,41 +8,38 @@ import javax.swing.*;
 
 public class GameWindow extends JFrame {
 
-    BufferedImage zdjecie;
-
-    GameWindow(String nazwa, int width, int height, int xCenter, int yCenter)
+    public BufferedImage zdjecie;
+    GameWindow(String nazwa, int width, int height)
     {
         super(nazwa); //utwórz okno
 
-        int width2 = (int)width;
-        int height2 = (int)height;
         setResizable(false);
-        setSize(width2,height2);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        setSize(width,height);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //zamknij proces po zamknięciu okna
+        setUndecorated(true);
 
     }
 
-    public void ButtonImage(JButton b, String file, int layoutX, int layoutY, boolean border)
+    public void ButtonImage(JButton button, String file, int layoutX, int layoutY, boolean border)
     {
+
+        button.setOpaque(false);
+        button.setContentAreaFilled(false);
+        button.setLocation(new Point(layoutX,layoutY));
+        button.setVisible(true);
+        button.setBorderPainted(border);
         try
         {
             zdjecie = ImageIO.read(new File(file));
             int imagewidth = zdjecie.getWidth();
             int imageheight= zdjecie.getHeight();
-            b.setSize(imagewidth,imageheight);
-            b.setIcon(new ImageIcon(zdjecie));
+            button.setSize(imagewidth,imageheight);
+            button.setIcon(new ImageIcon(zdjecie));
         }
-        catch(Exception e)
+        catch(Exception ex)
         {
-            e.printStackTrace();
+            ex.printStackTrace();
         }
-
-        b.setOpaque(false);
-        b.setBorderPainted(border);
-        b.setContentAreaFilled(false);
-        b.setLocation(new Point(layoutX,layoutY));
-        b.setVisible(true);
     }
 
 }

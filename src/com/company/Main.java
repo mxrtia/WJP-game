@@ -42,20 +42,15 @@ public class Main {
     public static JButton key17;
     public static JTextArea informacja;
     public static JButton arrow;
+    public static JButton padlock;
+    public static JButton padlock2;
+    public static JButton padlock3;
 
     public static void main(String[] args) {
 	int gameWidth =  1280;
 	int gameHeight = 1024;
 
-	//pobierz rozmiar ekranu
-	int screenWidth=Toolkit.getDefaultToolkit().getScreenSize().width;
-	int screenHeight=Toolkit.getDefaultToolkit().getScreenSize().height;
-
-	//wyśrodkowanie pola gry na ekranie
-	int xCenter=(screenWidth-gameWidth)/2;
-	int yCenter=(screenHeight-gameHeight)/2;
-
-    GameWindow gra=new GameWindow("PianoTime", gameWidth, gameHeight, xCenter, yCenter);
+    GameWindow gra=new GameWindow("PianoTime", gameWidth, gameHeight);
 
     try
 	{
@@ -98,24 +93,24 @@ public class Main {
         informacja = new JTextArea();
         informacja.setEditable(false);
         arrow = new JButton();
+        padlock = new JButton();
+        padlock2 = new JButton();
+        padlock3 = new JButton();
 
 		poziom1.addActionListener(new poziom1class(gra));
-		poziom2.addActionListener(new poziom2class(gra, opcje));
-		poziom3.addActionListener(new poziom3class(gra, opcje));
-		poziom4.addActionListener(new poziom4class(gra, opcje));
 
-		gra.ButtonImage(poziom1, "images/poziom1.png", 0,890, true);
-        gra.ButtonImage(poziom2, "images/poziom2.png", 320,890, true);
-        gra.ButtonImage(poziom3, "images/poziom3.png", 640,890, true);
-        gra.ButtonImage(poziom4, "images/poziom4.png", 959,890, true);
-        gra.ButtonImage(opcje, "images/opcje.png", 1060,890, true);
+		gra.ButtonImage(poziom1, "images/poziom1.png", 0,924, true);
+        gra.ButtonImage(poziom2, "images/poziom2.png", 320,924, true);
+        gra.ButtonImage(poziom3, "images/poziom3.png", 640,924, true);
+        gra.ButtonImage(poziom4, "images/poziom4.png", 959,924, true);
+        gra.ButtonImage(opcje, "images/opcje.png", 1066,974, true);
         gra.ButtonImage(klawiatura, "images/piano_keys2.jpg", 190, 275, false);
         gra.ButtonImage(miniklawa, "images/keys.png",190, 210, false);
         gra.ButtonImage(start, "images/start.png", 432, 700, true);
         gra.ButtonImage(wroc, "images/wroc.png", 1060, 939, true);
-        gra.ButtonImage(klawiaturabezdzwiekow, "images/klawiaturabezdzwiekow.png", 1008, 814, true);
-        gra.ButtonImage(klawiaturazdzwiekami, "images/klawiaturazdzwiekami.png", 1008, 745, true);
-        gra.ButtonImage(wyjscie, "images/wyjscie.png", 1008, 676, true);
+        gra.ButtonImage(klawiaturabezdzwiekow, "images/klawiaturabezdzwiekow.png", 802, 949, true);
+        gra.ButtonImage(klawiaturazdzwiekami, "images/klawiaturazdzwiekami.png", 802, 874, true);
+        gra.ButtonImage(wyjscie, "images/exit.png", 1235, 0, false);
         gra.ButtonImage(key1, "images/key0t.png", 190, 275, false); //GOOD
         gra.ButtonImage(key2, "images/key1t.png", 258, 275, false); //GOOD
         gra.ButtonImage(key3, "images/key2t.png", 280,275, false); //GOOD
@@ -133,6 +128,11 @@ public class Main {
         gra.ButtonImage(key15, "images/key2t.png", 909, 275, false); //GOOD
         gra.ButtonImage(key16, "images/key1t.png", 976, 275, false); //GOOD
         gra.ButtonImage(key17, "images/key4t.png", 999, 275, false); //GOOD
+        gra.ButtonImage(padlock, "images/klodka.png", 450, 855, false);
+        gra.ButtonImage(padlock2, "images/klodka.png", 760, 855, false);
+        gra.ButtonImage(padlock3, "images/klodka.png", 1080, 855, false);
+
+
         informacja.setText("Witaj w grze PianoTime! \nGrając w PianoTime możesz ćwiczyć swoją zręczność, \nkoncentrację oraz nauczyć się podstaw gry na pianinie.\nAby zacząć, wybierz poziom i kliknij przycisk 'Rozpocznij grę'.    ");
         Font czcionka = new Font ("Impact", Font.PLAIN, 40);
         informacja.setFont(czcionka);
@@ -140,6 +140,9 @@ public class Main {
         informacja.setBounds(100, 600, 1000, 500);
         informacja.setOpaque(false);
 
+        gra.add(padlock);
+        gra.add(padlock2);
+        gra.add(padlock3);
         gra.add(klawiaturazdzwiekami);
         gra.add(klawiaturabezdzwiekow);
         gra.add(wyjscie);
@@ -174,7 +177,7 @@ public class Main {
 
         klawiaturazdzwiekami.setVisible(false);
         klawiaturabezdzwiekow.setVisible(false);
-        wyjscie.setVisible(false);
+        wyjscie.setVisible(true);
         opcje.setVisible(false);
         klawiatura.setVisible(false);
         miniklawa.setVisible(false);
@@ -200,6 +203,7 @@ public class Main {
         informacja.setVisible(true);
         arrow.setVisible(false);
 
+
     	gra.setVisible(true); //WYŚWIETLENIE LABELU Z TŁEM GŁÓWNYM
 
         wyjscie.addActionListener(new ActionListener() {
@@ -223,12 +227,10 @@ public class Main {
                 if(klawiaturazdzwiekami.isVisible()){
                     klawiaturazdzwiekami.setVisible(false);
                     klawiaturabezdzwiekow.setVisible(false);
-                    wyjscie.setVisible(false);
                 }
                 else{
                     klawiaturabezdzwiekow.setVisible(true);
                     klawiaturazdzwiekami.setVisible(true);
-                    wyjscie.setVisible(true);
                 }
             }
 

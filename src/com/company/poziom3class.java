@@ -40,6 +40,9 @@ public class poziom3class implements ActionListener{
     public static JButton wyjscie;
     public static JTextArea informacja;
     public static JTextArea koniec;
+    public static JButton padlock;
+    public static JButton padlock2;
+    public static JButton padlock3;
 
 
     public poziom3class(GameWindow gw, JButton opcje)
@@ -77,6 +80,9 @@ public class poziom3class implements ActionListener{
         this.wyjscie = Main.wyjscie;
         this.informacja = Main.informacja;
         this.koniec = poziom1class.koniec;
+        padlock = Main.padlock;
+        padlock2 = Main.padlock2;
+        padlock3 = Main.padlock3;
 
     }
 
@@ -106,15 +112,17 @@ public class poziom3class implements ActionListener{
         poziom1.setVisible(false);
         poziom2.setVisible(false);
         //poziom3.setVisible(false);
-        poziom3.setLocation(0, 890);
+        padlock.setVisible(false);
+        padlock2.setVisible(false);
+        padlock3.setVisible(false);
+        poziom3.setLocation(0, 924);
         poziom4.setVisible(false);
         opcje.setVisible(true);
         miniklawa.setVisible(true);
         start.setVisible(true);
-        informacja.setVisible(false);
+        informacja.setVisible(true);
+        informacja.setText("MELODIA: Jingle Bells");
         koniec.setVisible(false);
 
-        KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        //manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
     }
 }

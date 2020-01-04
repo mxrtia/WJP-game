@@ -47,7 +47,7 @@ public class menuglowne implements ActionListener {
     {
         klawiaturazdzwiekami.setVisible(false);
         klawiaturabezdzwiekow.setVisible(false);
-        wyjscie.setVisible(false);
+        wyjscie.setVisible(true);
         opcje.setVisible(false);
         miniklawa.setVisible(false);
         klawiatura.setVisible(false);

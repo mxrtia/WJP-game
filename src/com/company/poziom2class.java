@@ -41,6 +41,9 @@ public class poziom2class implements ActionListener{
     public static JButton wyjscie;
     public static JTextArea informacja;
     public static JTextArea koniec;
+    public static JButton padlock;
+    public static JButton padlock2;
+    public static JButton padlock3;
 
     public poziom2class(GameWindow gw, JButton opcje)
     {
@@ -78,14 +81,17 @@ public class poziom2class implements ActionListener{
         this.wyjscie = Main.wyjscie;
         this.informacja = Main.informacja;
         this.koniec = poziom1class.koniec;
+        padlock = Main.padlock;
+        padlock2 = Main.padlock2;
+        padlock3 = Main.padlock3;
 
 }
-
     //co się stanie jak klikniesz poziom2???
     public void actionPerformed(ActionEvent e)
     {
         g.add(klawiatura);
 
+        koniec.setVisible(false);
         klawiatura.setVisible(true);
         key1.setVisible(false);
         key2.setVisible(false);
@@ -105,17 +111,18 @@ public class poziom2class implements ActionListener{
         key16.setVisible(false);
         key17.setVisible(false);
         poziom1.setVisible(false);
+        padlock.setVisible(false);
+        padlock2.setVisible(false);
+        padlock3.setVisible(false);
         //poziom2.setVisible(false);
-        poziom2.setLocation(0, 890);
+        poziom2.setLocation(0, 924);
         poziom3.setVisible(false);
         poziom4.setVisible(false);
         opcje.setVisible(true);
         miniklawa.setVisible(true);
         start.setVisible(true);
-        informacja.setVisible(false);
-        koniec.setVisible(false);
+        informacja.setVisible(true);
+        informacja.setText("MELODIA: Ode to joy");
 
-        KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        //manager.addKeyEventDispatcher(new poziom1class.MyDispatcher());
     }
 }
