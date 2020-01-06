@@ -2,15 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03cf1892-461a-445b-8793-28049f5c6f21" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key0f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key1f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key2f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/key4f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasa.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/.picasa.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/keys.1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/keys.2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/keys.3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/keys.4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/keys.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/.picasaoriginals/piano_keys2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key0t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key1t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key2t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/key4t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/keys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/klawiaturabezdzwiekow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/klawiaturazdzwiekami.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/klodka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/opcje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/piano_keys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/piano_keys2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/poziom1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/poziom2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/poziom3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/poziom4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wroc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wyjscie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/META-INF/WJP-Piano_time.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/GameWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$2.class" afterDir="false" />
@@ -18,17 +41,36 @@
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/menuglowne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/menuglowne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/PianoTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/menuglowne.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class$MyDispatcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom1class.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom2class.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom3class.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WJP-Piano_time/com/company/poziom4class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GameLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/a.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/ais.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/b.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/c.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/c1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/cis.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/cis1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/d.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/d1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/dis.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/dis1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/e.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/e1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/f.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/fis.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/g.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/gis.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/menuglowne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/menuglowne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PianoTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PianoTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/menuglowne.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom1class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom1class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom2class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom2class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/poziom3class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/poziom3class.java" afterDir="false" />
@@ -39,6 +81,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,6 +102,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/WJP-game-master/WJP-Piano_time.iml" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

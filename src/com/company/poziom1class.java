@@ -1,14 +1,8 @@
 package com.company;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.security.Key;
-import java.time.LocalTime;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class poziom1class implements ActionListener{
 
@@ -49,10 +43,11 @@ public class poziom1class implements ActionListener{
     public static JButton padlock;
     public static JButton padlock2;
     public static JButton padlock3;
+    static JButton pomoc;
 
     /** POZIOM 1 **/
-
-    public static int keyeventy[]={KeyEvent.VK_Y, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+    //ustalenie sekwencji przycisków klawiatury, które musi wcisnąć gracz, aby prawidłowo przejść dany poziom
+    public static int[] keyeventy ={KeyEvent.VK_Y, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
             KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_W, KeyEvent.VK_R, KeyEvent.VK_Y,
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E,
@@ -64,7 +59,8 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_R, KeyEvent.VK_E,
             KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T, KeyEvent.VK_Y,
             KeyEvent.VK_R, KeyEvent.VK_W, KeyEvent.VK_ENTER}; //36 elementów + enter = 37 elementów
-    public static int XPos[]={396, 459, 564,
+    //ustalenie miejsc na osi X w których ma się pojawić strzałka wskazująca odpowiedni dźwięk
+    public static int[] XPos ={396, 459, 564,
             459, 396, 296,
             296, 459, 653,
             564, 459, 396,
@@ -73,14 +69,14 @@ public class poziom1class implements ActionListener{
             564, 698, 925, 819, 698, 653,
             459, 653, 564, 459, 396,
             396, 459, 564, 653,
-            459, 296, /*pierwszy dźwięk poziom2*/396}; //(36 niebieskich elementów(35+1poziom2) [+ 1 w mainie])
+            459, 296, 396}; //(36 niebieskich elementów(35+1poziom2) [+ 1 w mainie])
 
     public static int counter = 0;
     public static int last = 36;
 
     /** POZIOM 2 **/
 
-    public static int keyeventy2[]={KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
+    public static int[] keyeventy2 ={KeyEvent.VK_E, KeyEvent.VK_E, KeyEvent.VK_R, KeyEvent.VK_T,
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
             KeyEvent.VK_E, KeyEvent.VK_W, KeyEvent.VK_W,
@@ -96,7 +92,7 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_E, KeyEvent.VK_W,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_W, KeyEvent.VK_E,
             KeyEvent.VK_W, KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_ENTER}; //62 elementy + enter = 63 elementy
-    public static int XPos2[]={396, 459, 564,
+    public static int[] XPos2 ={396, 459, 564,
             564, 459, 396, 296,
             190, 190, 296, 396,
             396, 296, 296,
@@ -118,7 +114,7 @@ public class poziom1class implements ActionListener{
 
     /** POZIOM 3 **/
 
-    public static int keyeventy3[]={KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_Q,
+    public static int[] keyeventy3 ={KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_Q,
             KeyEvent.VK_Q, KeyEvent.VK_Q, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_R, KeyEvent.VK_W,
             KeyEvent.VK_W, KeyEvent.VK_W, KeyEvent.VK_7, KeyEvent.VK_Y, KeyEvent.VK_T, KeyEvent.VK_E,
             KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_7, KeyEvent.VK_T, KeyEvent.VK_Y,
@@ -141,7 +137,7 @@ public class poziom1class implements ActionListener{
             KeyEvent.VK_I, KeyEvent.VK_I, KeyEvent.VK_7, KeyEvent.VK_T, KeyEvent.VK_R,
             KeyEvent.VK_ENTER}; //97 elementów + enter = 98 elementów
 
-    public static int XPos3[]={653, 564, 459, 190,
+    public static int[] XPos3 ={653, 564, 459, 190,
             190, 190, 653, 564, 459, 296,
             296, 296, 698, 653, 564, 396,
             819, 819, 698, 564, 653,
@@ -219,7 +215,6 @@ public class poziom1class implements ActionListener{
 
     public poziom1class(GameWindow gw) {
         g = gw;
-        //w = new Window();
         this.poziom1 = Main.poziom1;
         this.poziom2 = Main.poziom2;
         this.poziom3 = Main.poziom3;
@@ -248,6 +243,7 @@ public class poziom1class implements ActionListener{
         this.klawiaturabezdzwiekow = Main.klawiaturabezdzwiekow;
         this.klawiaturazdzwiekami = Main.klawiaturazdzwiekami;
         this.wyjscie = Main.wyjscie;
+        pomoc = Main.pomoc;
         this.informacja = Main.informacja;
         this.arrow = Main.arrow;
         padlock = Main.padlock;
@@ -265,7 +261,7 @@ public class poziom1class implements ActionListener{
         koniec.setVisible(false);
 
 
-        g.ButtonImage(arrow, "images/arrow.png", 653, 135, false);
+        g.ButtonImage(arrow, "res/images/arrow.png", 653, 135, false);
     }
 
     //co się stanie jak klikniesz poziom1???
@@ -309,7 +305,7 @@ public class poziom1class implements ActionListener{
         informacja.setLocation(350, 945);
 
         KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        manager.addKeyEventDispatcher(new MyDispatcher());
+        manager.addKeyEventDispatcher(new MyDispatcher()); //dodanie keyeventdispatchera (stworzony w klasie MyDispatcher)
 
         start.addActionListener(new ActionListener() {
             @Override
@@ -317,7 +313,6 @@ public class poziom1class implements ActionListener{
             {
                 startTime = System.currentTimeMillis();
                 start.setVisible(false);
-                //timer start
                 arrow.setVisible(true);
             }
         });
@@ -456,8 +451,8 @@ public class poziom1class implements ActionListener{
                             estimatedTime = (System.currentTimeMillis() - startTime)/1000;
                             czas = estimatedTime;
                             value = (int)czas;
-                            pts = (value*177-10000);
-                            pts = Math.abs(pts);
+                            pts = (value*177-10000); //obliczenie wyniku
+                            pts = Math.abs(pts); //obliczenie wyniku
                             koniec.setText("Gratulacje! Udało ci się ukończyć POZIOM1. \nTwój wynik: "+pts+" PTS \nTwój czas: "+estimatedTime+"s");
 
                             poziom1.setVisible(false);
@@ -472,6 +467,7 @@ public class poziom1class implements ActionListener{
                             klawiaturazdzwiekami.setVisible(false);
                             klawiaturabezdzwiekow.setVisible(false);
                             wyjscie.setVisible(true);
+                            pomoc.setVisible(true);
                             miniklawa.setVisible(false);
                             klawiatura.setVisible(true);
                             arrow.setVisible(false);
@@ -491,7 +487,7 @@ public class poziom1class implements ActionListener{
                             value = (int)czas;
                             pts = (value*177-12000);
                             pts = Math.abs(pts);
-                            koniec.setText("Gratulacje! Udało ci się ukończyć POZIOM1. \nTwój wynik: "+pts+" PTS \nTwój czas: "+estimatedTime+"s");
+                            koniec.setText("Gratulacje! Udało ci się ukończyć POZIOM2. \nTwój wynik: "+pts+" PTS \nTwój czas: "+estimatedTime+"s");
 
                             poziom1.setVisible(false);
                             poziom2.setVisible(false);
@@ -508,6 +504,7 @@ public class poziom1class implements ActionListener{
                             klawiaturazdzwiekami.setVisible(false);
                             klawiaturabezdzwiekow.setVisible(false);
                             wyjscie.setVisible(true);
+                            pomoc.setVisible(true);
                             arrow.setVisible(false);
                             informacja.setVisible(false);
                         }
@@ -525,7 +522,7 @@ public class poziom1class implements ActionListener{
                             value = (int)czas;
                             pts = (value*177-15000);
                             pts = Math.abs(pts);
-                            koniec.setText("Gratulacje! Udało ci się ukończyć POZIOM1. \nTwój wynik: "+pts+" PTS \nTwój czas: "+estimatedTime+"s");
+                            koniec.setText("Gratulacje! Udało ci się ukończyć POZIOM3. \nTwój wynik: "+pts+" PTS \nTwój czas: "+estimatedTime+"s");
 
                             poziom1.setVisible(false);
                             poziom2.setVisible(false);
@@ -541,6 +538,7 @@ public class poziom1class implements ActionListener{
                             klawiaturazdzwiekami.setVisible(false);
                             klawiaturabezdzwiekow.setVisible(false);
                             wyjscie.setVisible(true);
+                            pomoc.setVisible(true);
                             arrow.setVisible(false);
                             informacja.setVisible(false);
                         }
@@ -570,6 +568,7 @@ public class poziom1class implements ActionListener{
                             klawiaturazdzwiekami.setVisible(false);
                             klawiaturabezdzwiekow.setVisible(false);
                             wyjscie.setVisible(true);
+                            pomoc.setVisible(true);
                             arrow.setVisible(false);
                             informacja.setVisible(false);
                         }

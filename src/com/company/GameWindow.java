@@ -1,6 +1,6 @@
 package com.company;
+
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.imageio.ImageIO;
@@ -13,16 +13,15 @@ public class GameWindow extends JFrame {
     {
         super(nazwa); //utwórz okno
 
-        setResizable(false);
-        setSize(width,height);
+        setResizable(false); //brak możliwości zmiany rozmiaru okna
+        setSize(width,height); //ustalenie szerokości i wysokości okna
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //zamknij proces po zamknięciu okna
-        setUndecorated(true);
+        setUndecorated(true); //usuń pasek u góry okna
 
     }
 
     public void ButtonImage(JButton button, String file, int layoutX, int layoutY, boolean border)
     {
-
         button.setOpaque(false);
         button.setContentAreaFilled(false);
         button.setLocation(new Point(layoutX,layoutY));

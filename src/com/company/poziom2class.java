@@ -1,14 +1,12 @@
 package com.company;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class poziom2class implements ActionListener{
 
     public GameWindow g;
-    public static GameWindow w;
     public JButton poziom1;
     public static JButton poziom2;
     public static JButton poziom3;
@@ -49,13 +47,11 @@ public class poziom2class implements ActionListener{
     {
 
         g = gw;
-        //w = new Window();
         this.poziom1 = Main.poziom1;
         this.poziom2 = Main.poziom2;
         this.poziom3 = Main.poziom3;
         this.poziom4 = Main.poziom4;
         this.opcje = Main.opcje;
-        this.wroc = Main.wroc;
         this.klawiatura = Main.klawiatura;
         this.miniklawa = Main.miniklawa;
         this.start = Main.start;
